@@ -37,7 +37,7 @@ jobs:
           tag_name: "v1.2.4"
           files: README.md
       #- name: "Upload release artifact"
-      #  uses: bozemanpass/action-gh-release@v1
+      #  uses: bozemanpass/action-gh-release@gitea-testing
       #  with:
       #    tag_name: "v1.2.3"
       #    files: README.md

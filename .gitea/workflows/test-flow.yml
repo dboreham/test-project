@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: "Clone project repository"
         uses: actions/checkout@v3
+      - name: "Dump environment"
+        run: env
       - name: "Create release"
         uses: bozemanpass/action-gh-release@v1
         with:

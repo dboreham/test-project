@@ -1,0 +1,24 @@
+name: Test Workflow
+
+on:
+  pull_request:
+    branches: '*'
+  push:
+    branches: '*'
+    
+jobs:
+  test:
+    name: "Publish"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Clone project repository"
+        uses: actions/checkout@v3
+      - name: "Create release"
+        uses: bozemanpass/action-gh-release@v1
+        with:
+          tag_name: "v1.2.3"
+      - name: "Upload release artifact"
+        uses: bozemanpass/action-gh-release@v1
+        with:
+          tag_name: "v1.2.3"
+          files: README.md

@@ -34,7 +34,7 @@ jobs:
       - name: "Create release"
         uses: bozemanpass/action-gh-release@gitea-testing
         with:
-          tag_name: "v1.2.9"
+          tag_name: "v1.2.10"
           files: README.md
       #- name: "Upload release artifact"
       #  uses: bozemanpass/action-gh-release@gitea-testing

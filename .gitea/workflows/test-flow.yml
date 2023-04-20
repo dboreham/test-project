@@ -36,3 +36,4 @@ jobs:
         run: echo '${{ toJSON(secrets) }}'
       - name: Run test script
         run: ./scripts/run-test.sh
+

@@ -1,0 +1,8 @@
+services:
+  test:
+    image: ubuntu:22.04
+    entrypoint: sh -c
+    command: ["while :; do sleep 1; done"]
+    volumes:
+      - ../config/config-file.txt:/config-file.txt
+      - ./test-file.txt:/test-file.txt

@@ -34,13 +34,5 @@ jobs:
         run: echo '${{ toJSON(vars) }}'
       - name: Dump secrets context
         run: echo '${{ toJSON(secrets) }}'
-      - name: "Create release"
-        uses: bozemanpass/action-gh-release@gitea-testing
-        with:
-          tag_name: "v1.2.14"
-          files: README.md
-      #- name: "Upload release artifact"
-      #  uses: bozemanpass/action-gh-release@gitea-testing
-      #  with:
-      #    tag_name: "v1.2.3"
-      #    files: README.md
+      - name: Run test script
+        run: ./scripts/run-test.sh

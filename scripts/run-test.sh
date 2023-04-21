@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 cd ${SCRIPT_DIR}
+echo "Docker info:"
+docker info
 DOCKER_BUILDKIT=0 docker build -t dboreham/test-container:test -f ../container/Dockerfile ../container
 echo "Images in the registry:"
 docker image ls -a
